@@ -38,6 +38,9 @@ export type GalleryItem = {
 export const hotel = {
   name: "Golden Gift Palace Hotel",
   shortName: "Gift B Golden",
+  logo: "/images/gift-b-golden/logo-full.png",
+  logoMark: "/images/gift-b-golden/logo-mark.png",
+  heroImage: "/images/gift-b-golden/hotel-hero.jpeg",
   location: "Tarkwa - Western Region",
   email: "booking@giftbgolden.com",
   phone: "+233 53 883 0832",
@@ -60,7 +63,7 @@ export const rooms: Room[] = [
     rate: "GHS 600 / night",
     summary: "Comfortable ground-floor room for business and leisure guests.",
     amenities: ["Digital satellite TV", "Wi-Fi", "Tea and coffee", "Shower"],
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/22.jpeg",
+    image: "/images/gift-b-golden/hotel-room-1.jpeg",
   },
   {
     slug: "standard-room",
@@ -68,7 +71,7 @@ export const rooms: Room[] = [
     rate: "Request rate",
     summary: "Modern standard accommodation for short stays in Tarkwa.",
     amenities: ["Queen bed", "Wi-Fi", "Safety box", "Mini bar"],
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/13.jpeg",
+    image: "/images/gift-b-golden/hotel-room-2.jpeg",
   },
   {
     slug: "executive-suite",
@@ -76,7 +79,7 @@ export const rooms: Room[] = [
     rate: "Request rate",
     summary: "Suite option for guests who need more room and privacy.",
     amenities: ["King bed", "Kitchenette", "Mini bar", "Work area"],
-    image: "https://giftbgolden.com/wp-content/uploads/2025/12/l5-800x600.jpeg",
+    image: "/images/gift-b-golden/hotel-amenity-1.jpeg",
   },
   {
     slug: "presidential-suite",
@@ -84,7 +87,7 @@ export const rooms: Room[] = [
     rate: "Request rate",
     summary: "Top room category for premium stays and executive visits.",
     amenities: ["Second bedroom option", "Kitchenette", "Satellite TV", "Wi-Fi"],
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/p4.jpeg",
+    image: "/images/gift-b-golden/hotel-hero.jpeg",
   },
 ];
 
@@ -93,51 +96,51 @@ export const amenities: Amenity[] = [
     title: "Bar & Restaurants",
     description:
       "Local and continental dishes with guest-selected drinks in a relaxed hotel setting.",
-    image: "https://giftbgolden.com/wp-content/uploads/2025/12/l5-800x600.jpeg",
+    image: "/images/gift-b-golden/hotel-amenity-1.jpeg",
   },
   {
     title: "Pool",
     description: "An infinity-edge pool for refreshing, relaxing, and rejuvenating stays.",
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/13.jpeg",
+    image: "/images/gift-b-golden/hotel-amenity-2.jpeg",
   },
   {
     title: "Casino",
     description: "Casino games and recreational entertainment for guests.",
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/p4.jpeg",
+    image: "/images/gift-b-golden/hotel-amenity-3.jpeg",
   },
   {
     title: "Conference Rooms",
     description: "Meeting spaces for business crews, events, and group sessions.",
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/22.jpeg",
+    image: "/images/gift-b-golden/hotel-room-1.jpeg",
   },
   {
     title: "Fitness Gym",
     description: "Fitness and wellness support for in-house guests.",
-    image: "https://giftbgolden.com/wp-content/uploads/2025/12/l5-800x600.jpeg",
+    image: "/images/gift-b-golden/hotel-amenity-1.jpeg",
   },
   {
     title: "Shuttle Services",
     description: "Transport support for guests and arranged hotel movements.",
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/p4.jpeg",
+    image: "/images/gift-b-golden/hotel-hero.jpeg",
   },
 ];
 
 export const gallery: GalleryItem[] = [
   {
     title: "Golden Gift Palace exterior",
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/p4.jpeg",
+    image: "/images/gift-b-golden/hotel-hero.jpeg",
   },
   {
     title: "Deluxe guest room",
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/22.jpeg",
+    image: "/images/gift-b-golden/hotel-room-1.jpeg",
   },
   {
     title: "Hotel lounge",
-    image: "https://giftbgolden.com/wp-content/uploads/2025/12/l5-800x600.jpeg",
+    image: "/images/gift-b-golden/hotel-room-2.jpeg",
   },
   {
     title: "Poolside leisure",
-    image: "https://giftbgolden.com/wp-content/uploads/2024/10/13.jpeg",
+    image: "/images/gift-b-golden/hotel-amenity-2.jpeg",
   },
 ];
 
