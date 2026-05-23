@@ -6,6 +6,7 @@ import type { Room } from "@/lib/content/hotel-content";
 type Props = {
   rooms: Room[];
   selectedRoom?: string;
+  compact?: boolean;
 };
 
 type BookingResponse = {
@@ -18,7 +19,7 @@ function formValue(form: FormData, key: string) {
   return String(form.get(key) ?? "").trim();
 }
 
-export function BookingForm({ rooms, selectedRoom = "" }: Props) {
+export function BookingForm({ rooms, selectedRoom = "", compact = false }: Props) {
   const [status, setStatus] = useState<"idle" | "submitting" | "sent" | "failed">("idle");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Record<string, string[]>>({});
@@ -61,7 +62,7 @@ export function BookingForm({ rooms, selectedRoom = "" }: Props) {
   const fieldError = (key: string) => errors[key]?.[0] ? <span className="error">{errors[key]?.[0]}</span> : null;
 
   return (
-    <form className="form card" onSubmit={submit}>
+    <form className={compact ? "form compact-booking-form" : "form card"} onSubmit={submit}>
       <div className="form-grid">
         <label>
           Full name
@@ -106,7 +107,7 @@ export function BookingForm({ rooms, selectedRoom = "" }: Props) {
       </div>
       <label>
         Special requests
-        <textarea name="notes" rows={5} />
+        <textarea name="notes" rows={compact ? 3 : 5} />
       </label>
       <button className="button button-primary focus-ring" disabled={status === "submitting"}>
         {status === "submitting" ? "Submitting..." : "Submit booking request"}

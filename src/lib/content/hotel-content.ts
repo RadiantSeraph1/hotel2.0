@@ -5,6 +5,15 @@ export type Room = {
   summary: string;
   amenities: string[];
   image: string;
+  gallery: string[];
+  adults: number;
+  children: number;
+  maxGuests: number;
+  description: string;
+  prices: Array<{
+    label: string;
+    amount: string;
+  }>;
 };
 
 export type Amenity = {
@@ -64,30 +73,83 @@ export const rooms: Room[] = [
     summary: "Comfortable ground-floor room for business and leisure guests.",
     amenities: ["Digital satellite TV", "Wi-Fi", "Tea and coffee", "Shower"],
     image: "/images/gift-b-golden/hotel-room-1.jpeg",
+    gallery: [
+      "/images/gift-b-golden/hotel-room-1.jpeg",
+      "/images/gift-b-golden/hotel-amenity-2.jpeg",
+    ],
+    adults: 2,
+    children: 2,
+    maxGuests: 4,
+    description:
+      "The Deluxe Ground Floor room is designed for guests who want easy access, comfort, and a calm stay. It includes a cozy bed, clean bathroom, in-room essentials, Wi-Fi, and a practical layout for short business or leisure visits.",
+    prices: [
+      { label: "Best available rate", amount: "GHS 600/night" },
+      { label: "Flexible check-in", amount: "Request rate" },
+    ],
   },
   {
     slug: "standard-room",
-    name: "Standard Room",
+    name: "Superior",
     rate: "Request rate",
-    summary: "Modern standard accommodation for short stays in Tarkwa.",
+    summary: "Enhanced comfort, modern styling, and standard stay amenities.",
     amenities: ["Queen bed", "Wi-Fi", "Safety box", "Mini bar"],
     image: "/images/gift-b-golden/hotel-room-2.jpeg",
+    gallery: [
+      "/images/gift-b-golden/hotel-room-2.jpeg",
+      "/images/gift-b-golden/hotel-room-1.jpeg",
+    ],
+    adults: 2,
+    children: 2,
+    maxGuests: 4,
+    description:
+      "The Superior room gives guests a warmer, more spacious stay with modern furnishing, air conditioning, fast Wi-Fi, a flat-screen TV, and thoughtful details for business and leisure travelers.",
+    prices: [
+      { label: "Default", amount: "GHS 1,000/night" },
+      { label: "Weekend rate", amount: "GHS 827/night" },
+      { label: "Promo rate", amount: "GHS 661/night" },
+    ],
   },
   {
     slug: "executive-suite",
-    name: "Executive Suite",
+    name: "Executive",
     rate: "Request rate",
     summary: "Suite option for guests who need more room and privacy.",
     amenities: ["King bed", "Kitchenette", "Mini bar", "Work area"],
     image: "/images/gift-b-golden/hotel-amenity-1.jpeg",
+    gallery: [
+      "/images/gift-b-golden/hotel-amenity-1.jpeg",
+      "/images/gift-b-golden/hotel-room-2.jpeg",
+    ],
+    adults: 2,
+    children: 2,
+    maxGuests: 4,
+    description:
+      "The Executive room adds premium in-room space for guests who need more privacy, comfort, and work-ready amenities during their Tarkwa stay.",
+    prices: [
+      { label: "Best available rate", amount: "Pricing on request" },
+      { label: "Corporate stay", amount: "Request rate" },
+    ],
   },
   {
     slug: "presidential-suite",
-    name: "Presidential Suite",
+    name: "VIP",
     rate: "Request rate",
     summary: "Top room category for premium stays and executive visits.",
     amenities: ["Second bedroom option", "Kitchenette", "Satellite TV", "Wi-Fi"],
     image: "/images/gift-b-golden/hotel-hero.jpeg",
+    gallery: [
+      "/images/gift-b-golden/hotel-hero.jpeg",
+      "/images/gift-b-golden/hotel-amenity-3.jpeg",
+    ],
+    adults: 3,
+    children: 3,
+    maxGuests: 6,
+    description:
+      "The VIP room is the premium option for executive visits, private stays, and guests who want the most spacious accommodation profile at Golden Gift Palace Hotel.",
+    prices: [
+      { label: "Best available rate", amount: "Pricing on request" },
+      { label: "Executive package", amount: "Request rate" },
+    ],
   },
 ];
 

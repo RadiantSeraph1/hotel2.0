@@ -17,4 +17,13 @@ describe("Gift B Golden content", () => {
     expect(news).toHaveLength(4);
     expect(reviews.filter((review) => review.status === "published")).toHaveLength(3);
   });
+
+  it("supports the booking portal room cards and room detail pages", () => {
+    for (const room of rooms) {
+      expect(room.image).toMatch(/^\/images\/gift-b-golden\//);
+      expect(room.gallery.length).toBeGreaterThanOrEqual(2);
+      expect(room.maxGuests).toBeGreaterThanOrEqual(room.adults);
+      expect(room.prices.length).toBeGreaterThanOrEqual(1);
+    }
+  });
 });

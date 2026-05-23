@@ -31,6 +31,9 @@ export default async function BookingPage({
               <p>{hotel.phone}</p>
               <p>{hotel.email}</p>
               <p className="form-help">You can also use the existing booking portal as a fallback: {hotel.bookingDomain}</p>
+              <a className="button button-outline focus-ring" href="/booking/login">
+                Open booking portal
+              </a>
             </aside>
           </div>
         </section>
